@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Icon, Text, Badge } from 'native-base'
 
-import Custom from '../themes/Custom'
-
 export default class Home extends Component {
   render() {
     return (
-      <Container theme={Custom}>
+      <Container theme={this.props.theme}>
         <Header>
           <Title>React Native</Title>
 
@@ -16,7 +14,7 @@ export default class Home extends Component {
         </Header>
 
         <Content>
-          <Text> Home Page</Text>
+          <Text> Home Page -{ this.props.appStore.name}</Text>
         </Content>
 
         <Footer >
